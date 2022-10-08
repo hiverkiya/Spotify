@@ -16,21 +16,23 @@ export default function Home() {
       <main className="flex">
         {/*Sidebar */}
         <Sidebar />
-        <Center/>
+        <Center />
         {/* Center*/}
       </main>
-      <div className="sticky bottom-0">{/*Player*/}
-      
-      <Player/></div>
+      <div className="sticky bottom-0">
+        {/*Player*/}
+
+        <Player />
+      </div>
     </div>
   );
 }
 
-export async function getServerSideProps(context){
-  const session = await getSession(context)
+export async function getServerSideProps(context) {
+  const session = await getSession(context);
   return {
-    props:{
-      session
-    }
-  }
+    props: {
+      session,
+    },
+  };
 }

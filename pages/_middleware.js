@@ -7,13 +7,13 @@ export async function middleware(req) {
     secret: process.env.JWT_SECRET,
   });
   const { pathname } = req.nextUrl;
-  // Allow the requests if the follwing is true...
+  // Allow the requests if the follwing is true.
   // If the token exists for next-auth session & provider fetching or the token already exists
   if (pathname.includes("/api/auth") || token) {
     return NextResponse.next();
   }
   // Redirect them to login if they don't have token and are requesting a protected route
   if (!token && pathname !== "/login") {
-    return NextResponse.redirect("http://localhost:3000/login");
+    return NextResponse.redirect("/login");
   }
 }

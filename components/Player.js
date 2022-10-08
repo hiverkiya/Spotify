@@ -1,6 +1,4 @@
 import {
-  HeartIcon,
-  VolumeDownIcon,
   VolumeOffIcon,
 } from "@heroicons/react/outline";
 import { useSession } from "next-auth/react";
@@ -10,7 +8,7 @@ import {
   FastForwardIcon,
   PauseIcon,
   PlayIcon,
-  ReplyIcon,
+  CodeIcon,
   VolumeUpIcon,
 } from "@heroicons/react/solid";
 import { useCallback, useEffect, useState } from "react";
@@ -24,7 +22,7 @@ function Player() {
   const spotifyApi = useSpotify();
   const { data: session, status } = useSession();
   const [currentTrackId, setCurrentTrackId] =
-    useRecoilState(currentTrackIdState);
+  useRecoilState(currentTrackIdState);
   const [isPlaying, setIsPlaying] = useRecoilState(isPlayingState);
   const [volume, setVolume] = useState(50);
   const songInfo = useSongInfo();
@@ -39,8 +37,9 @@ function Player() {
       });
     }
   };
+  
   const handlePlayPause = () => {
-    spotifyApi.getMyCurrentPlaybackState().then.apply((data) => {
+    spotifyApi.getMyCurrentPlaybackState().then((data) => {
       if (data.body.is_playing) {
         spotifyApi.pause();
         setIsPlaying(false);
@@ -83,12 +82,15 @@ function Player() {
         </div>
       </div>
       <div className="flex items-center justify-evenly">
-        <SwitchHorizontalIcon className="button" />
+        <SwitchHorizontalIcon
+          className="button"
+          onClick={() => spotifyApi.setShuffle(true)}
+        />
         <RewindIcon
           className="button"
           onClick={() => spotifyApi.skipToPrevious()}
         />
-        {is_playing ? (
+        {isPlaying ? (
           <PauseIcon onClick={handlePlayPause} className="button w-10 h-10" />
         ) : (
           <PlayIcon onClick={handlePlayPause} className="button w-10 h10" />
@@ -97,7 +99,10 @@ function Player() {
           className="button"
           onClick={() => spotifyApi.skipToNext()}
         />
-        <ReplyIcon className="button" />
+        <CodeIcon
+          className="button"
+          onClick={() => spotifyApi.setShuffle(false)}
+        />
       </div>
       {/*Right hand side */}
       <div className="flex items-center space-x-3 md:space-x-4 justify-end pr-5">

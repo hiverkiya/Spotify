@@ -52,7 +52,7 @@ function Sidebar() {
         </button>
         <button className="flex items-center space-x-2 hover:text-white ">
           <RssIcon className="h-5 w-5 text-green-500 " />
-          <p>Your Episodes</p>
+          <p className="text-green-500">Your Episodes</p>
         </button>
         <hr className="border-t-[0.1]px border-gray-900 " />
         {/*Playlist */}

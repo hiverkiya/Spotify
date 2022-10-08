@@ -11,7 +11,7 @@ export default function Home() {
     <div className="bg-black h-screen overflow-hidden">
       <Head>
         <title>Spotify</title>
-        <link rel="icon" href="/favicon.ico" />
+        <link rel="icon" href="/spotify.png" />
       </Head>
       <main className="flex">
         {/*Sidebar */}

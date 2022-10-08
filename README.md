@@ -1,6 +1,6 @@
 # Spotify 
 ![React](https://img.shields.io/badge/react-%2320232a.svg?style=for-the-badge&logo=react&logoColor=%2361DAFB)![Spotify](https://img.shields.io/badge/Spotify-1ED760?style=for-the-badge&logo=spotify&logoColor=white)![Next JS](https://img.shields.io/badge/Next-black?style=for-the-badge&logo=next.js&logoColor=white)![TailwindCSS](https://img.shields.io/badge/tailwindcss-%2338B2AC.svg?style=for-the-badge&logo=tailwind-css&logoColor=white)![NodeJS](https://img.shields.io/badge/node.js-6DA55F?style=for-the-badge&logo=node.js&logoColor=white)<img src="https://raw.githubusercontent.com/hiverkiya/Spotify/main/public/recoil.svg" alt="drawing" style="width:64px; height:-0px;"/>
-<p align="center">Spotify is a digital music service that gives you access to millions of songs</p>150
+<p align="center">Spotify is a digital music service that gives you access to millions of songs</p>
 
 
 https://user-images.githubusercontent.com/34170205/194730013-11bf449b-beb4-4d6d-b074-4d2bda16bb5e.mp4

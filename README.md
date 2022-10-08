@@ -45,4 +45,4 @@ NEXT_PUBLIC_CLIENT_ID = < Spotify Client ID >
 JWT_SECRET = <any string value here>
 ```
 
-[![MIT License](https://raw.githubusercontent.com/hiverkiya/Spotify/main/public/license.svg)](https://opensource.org/licenses/MIT)
+[![MIT License](https://raw.githubusercontent.com/hiverkiya/Spotify/main/public/license.svg)](https://github.com/hiverkiya/Spotify/blob/main/LICENSE)

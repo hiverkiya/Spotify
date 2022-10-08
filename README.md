@@ -16,10 +16,10 @@ https://user-images.githubusercontent.com/34170205/194730013-11bf449b-beb4-4d6d-
  
 ## Features
 
-- Authentication is handled by Oauth JWT, Nextjs Middleware and NextAuth to give authorize the user and allocate sufficient priviledges.
+- Authentication is handled by Oauth JWT, Nextjs Middleware, and NextAuth to authorize the user and allocate sufficient privileges.
 - Built-in router from Next.js handles the app routing
-- You can remotely control the active Spotify device to play, pause, shuffle or skip songs with additionaly functionality to tweak the volume with a debounce of 200 ms
-- RefreshToken ensures the longetivity of AccessToken by handshaking with the SpotifyWebAPI
+- You can remotely control the active Spotify device to play, pause, shuffle or skip songs with additional functionality to tweak the volume with a debounce of 200 ms
+- RefreshToken ensures the longevity  of AccessToken by handshaking with the SpotifyWebAPI
 - A global state management is handled by Recoil for the playlist and song
 ## Tech
 - [React](https://reactjs.org/) - A JavaScript library for building user interfaces

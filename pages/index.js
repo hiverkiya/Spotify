@@ -11,26 +11,28 @@ export default function Home() {
     <div className="bg-black h-screen overflow-hidden">
       <Head>
         <title>Spotify</title>
-        <link rel="icon" href="/favicon.ico" />
+        <link rel="icon" href="/spotify.png" />
       </Head>
       <main className="flex">
         {/*Sidebar */}
         <Sidebar />
-        <Center/>
+        <Center />
         {/* Center*/}
       </main>
-      <div className="sticky bottom-0">{/*Player*/}
-      
-      <Player/></div>
+      <div className="sticky bottom-0">
+        {/*Player*/}
+
+        <Player />
+      </div>
     </div>
   );
 }
 
-export async function getServerSideProps(context){
-  const session = await getSession(context)
+export async function getServerSideProps(context) {
+  const session = await getSession(context);
   return {
-    props:{
-      session
-    }
-  }
+    props: {
+      session,
+    },
+  };
 }

@@ -2,7 +2,7 @@ import {
   HomeIcon,
   SearchIcon,
   LibraryIcon,
-    RssIcon,
+  RssIcon,
   PlusCircleIcon,
 } from "@heroicons/react/outline";
 import { HeartIcon } from "@heroicons/react/solid";
@@ -28,8 +28,7 @@ function Sidebar() {
 
   return (
     <div className=" text-gray-500 p-5 text-xs lg:text-sm  border-r border-gray-900 overflow-y-scroll scrollbar-hide h-screen sm:max-w-[12rem] lg:max-w-[15rem] hidden md:inline-flex pb-36">
-      <div className="space-y-6">
-      
+      <div className="space-y-8 text-base font-semibold">
         <button className="flex items-center space-x-2  hover:text-white ">
           <HomeIcon className="h-5 w-5 " />
           <p>Home</p>
@@ -53,7 +52,7 @@ function Sidebar() {
         </button>
         <button className="flex items-center space-x-2 hover:text-white ">
           <RssIcon className="h-5 w-5 text-green-500 " />
-          <p>Your Episodes</p>
+          <p className="text-green-500">Your Episodes</p>
         </button>
         <hr className="border-t-[0.1]px border-gray-900 " />
         {/*Playlist */}

@@ -14,17 +14,17 @@ function useSongInfo() {
         const trackInfo = await fetch(
           `https://api.spotify.com/v1/tracks/${currentIdtrack}`,
           {
-              headers:{
-                  Authorization: `Bearer ${spotifyApi.getAccessToken()}`,
-              }
+            headers: {
+              Authorization: `Bearer ${spotifyApi.getAccessToken()}`,
+            },
           }
-        ).then(res=>res.json());
-        setSongInfo(trackInfo)
+        ).then((res) => res.json());
+        setSongInfo(trackInfo);
       }
     };
     fetchSongInfo();
   }, [currentIdtrack, spotifyApi]);
-  return songInfo
+  return songInfo;
 }
 
 export default useSongInfo;

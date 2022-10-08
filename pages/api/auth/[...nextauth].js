@@ -37,7 +37,7 @@ export default NextAuth({
   },
   callbacks: {
     async jwt({ token, account, user }) {
-      //initial sign in
+      //initial sign in, we get a JWT token back
       if (account && user) {
         return {
           ...token,
@@ -59,8 +59,8 @@ export default NextAuth({
     },
     async session({ session, token }) {
       session.user.accessToken = token.accessToken;
-      session.user.refreshToken=token.refreshToken;
-      session.user.username=token.username;
+      session.user.refreshToken = token.refreshToken;
+      session.user.username = token.username;
       return session;
     },
   },
